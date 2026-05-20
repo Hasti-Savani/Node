@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+
+<body>
+    <h1>Book Store</h1>
+
+    <form action="/search">
+        <input type="text" name="keyword" placeholder="Search Book">
+        <button type="submit">Search</button>
+    </form>
+
+    <a href="/admin">Admin Login</a>
+
+    <hr>
+
+    <% books.forEach(book=> { %>
+        <div>
+            <img src="<%= book.image %>" width="100">
+            <h3>
+                <%= book.title %>
+            </h3>
+            <p>₹ <%= book.price %>
+            </p>
+            <a href="/book/<%= book._id %>">View Details</a>
+        </div>
+        <hr>
+        <% }) %>
+</body>
+
+</html>

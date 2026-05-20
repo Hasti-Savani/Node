@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login Blog App</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-black">
+
+    <div class="flex justify-center items-center w-full h-screen">
+        <div class="max-w-2xl mx-auto bg-gray-200 p-10 rounded-xl">
+
+
+            <!-- AUTH SECTION -->
+            <div id="authSection">
+                <h1 class="text-4xl font-bold mb-10 text-center">Ragister Page</h1>
+                <input id="name" class="border p-3 w-full mb-4 rounded-lg" placeholder="Name">
+                <input id="email" class="border p-3 w-full mb-4 rounded-lg" placeholder="Email">
+                <input id="password" type="password" class="border p-3 w-full mb-4 rounded-lg" placeholder="Password">
+
+                <div class="flex justify-center gap-4 mt-6">
+                    <button onclick="register()"
+                        class="w-[100px] bg-blue-500 text-white px-4 py-2 rounded-full">Register</button>
+                    <button onclick="login()"
+                        class="w-[100px] bg-green-500 text-white px-4 py-2 rounded-full">Login</button>
+                </div>
+            </div>
+
+            <!-- BLOG SECTION -->
+            <div id="blogSection" class="hidden mt-6 relative">
+
+                <button onclick="logout()" class="bg-red-500 text-white px-4 py-2 rounded-full mb-4 absolute right-0 ">
+                    Logout
+                </button>
+
+                <h2 class="text-4xl font-bold mb-10 text-center">Add Blog Here</h2>
+
+
+                <input id="title" class="border p-3 w-full mb-4 rounded-lg" placeholder="Title">
+                <textarea id="desc" class="border p-3 w-full mb-4 rounded-lg" placeholder="Description"></textarea>
+
+                <button onclick="addBlog()" class="bg-blue-600 text-white px-4 py-2 rounded-full w-full my-4">
+                    Add Blog
+                </button>
+
+                <h3 class="text-2xl font-bold mb-10 text-center my-4">Blogs</h3>
+
+                <div id="blogs" class="mt-4"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

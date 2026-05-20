@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Blog App</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body style="font-family: Arial, Helvetica, sans-serif;" class="p-20 bg-black text-white">
+
+    <h1 class="text-5xl text-center mb-10">Blog App</h1>
+    <div class="flex p-5 mx-auto gap-10">
+        <div class="flex flex-col w-1/2 border-r pe-10">
+            <h2 class="text-xl my-5">Add your blog here</h2>
+            <input id="title" type="text" placeholder="Title" class="my-5 px-5 py-2 border border-white rounded">
+            <textarea id="desc" placeholder="Description" class="my-5 px-5 py-2 border border-white rounded"></textarea>
+            <button onclick="addBlog()" class="bg-blue-500 py-2 rounded-full mt-8 hover:scale-98 hover:bg-blue-600">Add
+                Blog</button>
+        </div>
+
+        <div class="w-1/2">
+            <h2 class="text-xl my-5">Blogs</h2>
+            <input id="search" type="text" class="mt-5 px-5 py-2 border border-white rounded" placeholder="Search..."
+                onkeyup="searchBlog()">
+
+            <div id="blogs" class="py-10 my-10"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

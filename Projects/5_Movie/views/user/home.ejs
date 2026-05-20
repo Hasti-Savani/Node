@@ -1,0 +1,19 @@
+<h1>Movie List</h1>
+
+<form action="/search">
+    <input name="q" placeholder="Search Movie">
+    <button>Search</button>
+</form>
+
+<% movies.forEach(movie=> { %>
+    <div>
+        <img src="/uploads/<%= movie.posterImage %>" width="150">
+        <h3>
+            <%= movie.title %>
+        </h3>
+        <p>
+            <%= movie.genre %>
+        </p>
+        <a href="/movie/<%= movie._id %>">View Details</a>
+    </div>
+    <% }) %>
